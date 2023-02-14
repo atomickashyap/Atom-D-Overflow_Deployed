@@ -80,7 +80,7 @@ const QuestionDetails = () => {
     const dispatch = useDispatch()
     const User = useSelector((state) => (state.currentUserReducer))
     const location = useLocation()
-    const url = 'https://atom-d-overflow-api.vercel.app'
+    const url = 'https://atom-d-overflow.vercel.app'
     // console.log(location)
 
     const handlePostAns = (e,answerLength) =>{
