@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
+import path from 'path'
 
 import dotenv from 'dotenv'
 import userRoutes from './routes/users.js'
@@ -12,12 +13,13 @@ mongoose.set('strictQuery', false);
 
 const app = express();
 dotenv.config();
+
 app.use(express.json({limit:"30mb",extended:true}))
 app.use(express.urlencoded({limit:"30mb", extended:true}))
 app.use(cors());
 
 app.get('/',(req,res) => {
-    res.send("This is a Atom-D OverFlow API")
+    res.sendFile(path.resolve(__dirname,"../client/build/index.html"));
 })
 
 app.use('/user', userRoutes)
