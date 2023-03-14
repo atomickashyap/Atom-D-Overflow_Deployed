@@ -19,7 +19,7 @@ app.use(express.urlencoded({limit:"30mb", extended:true}))
 app.use(cors());
 
 app.get('/',(req,res) => {
-    res.sendFile(path.resolve(__dirname,"../client/build/index.html"));
+    res.send("This is a Atom-D OverFlow API")
 })
 
 app.use('/user', userRoutes)
