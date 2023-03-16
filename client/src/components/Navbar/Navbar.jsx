@@ -54,6 +54,9 @@ const Navbar = () => {
                             <button className='nav-item nav-links' onClick={handleLogout}>Log out</button>
                         </> 
                     }
+                    <a href="https://atom-d-subscription.vercel.app/pricing">
+                        <button1><span>Buy Premium</span><i></i></button1>
+                    </a>
 
             </div>
         </nav>
