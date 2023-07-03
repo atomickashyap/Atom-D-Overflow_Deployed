@@ -14,7 +14,7 @@ mongoose.set('strictQuery', false);
 const app = express();
 dotenv.config();
 
-app.use(express.json({limit:"30mb",extended:true}))z
+app.use(express.json({limit:"30mb",extended:true}))
 app.use(cors());
 
 app.get('/',(req,res) => {
